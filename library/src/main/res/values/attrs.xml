@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SemiCircleView">
+        <attr name="circleBackground" format="color" />
+        <attr name="ringWidth" format="dimension" />
+        <attr name="startAngle" format="integer" />
+        <attr name="sweepAngle" format="integer" />
+        <attr name="progressColor" format="color" />
+        <attr name="progressValue" format="integer" />
+        <attr name="topText" format="string" />
+        <attr name="centerText" format="string" />
+        <attr name="bottomText" format="string" />
+        <attr name="topTextColor" format="color" />
+        <attr name="centerTextColor" format="color" />
+        <attr name="bottomTextColor" format="color" />
+        <attr name="topTextSize" format="dimension" />
+        <attr name="centerTextSize" format="dimension" />
+        <attr name="bottomTextSize" format="dimension" />
+    </declare-styleable>
+
+</resources>
