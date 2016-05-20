@@ -27,29 +27,31 @@ and override `onResume()`
     }
 ```
 # Attribute
-There are several attributes you can set:
-![](https://github.com/EoniJJ/SemiCircleView/blob/master/attrs.jpg)
-Text:
+
+### There are several attributes you can set:
+##### Text:
 +  topText
 +  centerText
 +  bottomText
-TextSize:
+
+##### TextSize:
 + topTextSize
 + centerTextSize
 + bottomTextSize
-Color:
+
+##### Color:
 + TopTextColor
 + centerTextColor
 + bottomTextColor
 + circleBackground
 + progressColor
-Others:
+
+##### Others:
 + startAngle(开始角度，以3点钟为0°)
 + seepAngle(扫过的角度)
 + progressValue(进度条百分比)
 + ringWidth(圆弧的宽度)
-    
-    
+
 for example, `in layout_main.xml`
 
     <com.zzj.library.SemiCircleView
