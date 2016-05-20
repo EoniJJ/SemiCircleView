@@ -30,21 +30,21 @@ and override `onResume()`
 
 ### There are several attributes you can set:
 ##### Text:
-+  topText
-+  centerText
-+  bottomText
++  topText(顶部文字)
++  centerText(中间文字)
++  bottomText(底部文字)
 
 ##### TextSize:
-+ topTextSize
-+ centerTextSize
-+ bottomTextSize
++ topTextSize(顶部文字大小)
++ centerTextSize(中间文字大小)
++ bottomTextSize(底部文字大小)
 
 ##### Color:
-+ TopTextColor
-+ centerTextColor
-+ bottomTextColor
-+ circleBackground
-+ progressColor
++ TopTextColor(顶部文字颜色)
++ centerTextColor(中间文字颜色)
++ bottomTextColor(底部文字颜色)
++ circleBackground(圆环背景色)
++ progressColor(进度条颜色)
 
 ##### Others:
 + startAngle(开始角度，以3点钟为0°)
