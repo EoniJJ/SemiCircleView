@@ -61,7 +61,9 @@ for example, `in layout_main.xml`
         android:layout_height="wrap_content"
         app:progressValue="50"/>
 
-and you also in `MainActivity.java`
+and also you can in `MainActivity.java`
+
+    semiCircleView.setmProgressValue(50);
 
 # Contacts
 Email:397336190@qq.com
