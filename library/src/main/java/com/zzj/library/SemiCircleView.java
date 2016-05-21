@@ -156,7 +156,7 @@ public class SemiCircleView extends View implements Runnable {
 
     public void setmCenterText(String mCenterText) {
         this.mCenterText = mCenterText;
-        invalidate();
+        postInvalidate();
     }
 
     public void setmBottomText(String mBottomText) {
@@ -199,13 +199,42 @@ public class SemiCircleView extends View implements Runnable {
     @Override
     public void run() {
         float temp = mProgressValue;
-        for (int i = 1; i <= temp; i++) {
-            setmProgressValue(i);
-            try {
-                Thread.sleep(50);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+        String temp_String = mCenterText;
+        if (isNumeric(temp_String)) {
+            int center_number = Integer.parseInt(temp_String);
+            float number = center_number / temp;
+            int centerTextIntTemp = 0;
+            for (int i = 1; i <= temp; i++) {
+                setmProgressValue(i);
+                setmCenterText(String.valueOf(centerTextIntTemp));
+                centerTextIntTemp += number;
+                try {
+                    Thread.sleep(50);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            for (int i = 1; i <= temp; i++) {
+                setmProgressValue(i);
+                try {
+                    Thread.sleep(50);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
+        if (temp_String != mCenterText) {
+            setmCenterText(temp_String);
+        }
+    }
+
+    public static boolean isNumeric(String str) {
+        for (int i = str.length(); --i >= 0; ) {
+            int chr = str.charAt(i);
+            if (chr < 48 || chr > 57)
+                return false;
+        }
+        return true;
     }
 }
