@@ -18,7 +18,7 @@ if you want to start animation,just in `MainActivity.java`
 ```java
     SemiCircleView semiCircleView = (SemiCircleView) findViewById(R.id.test);
 ```
-and override `onResume()`
+and override `onResume()` (if your mCenterText is not only number,that it can't change)
 ```java
  @Override
     protected void onResume() {
