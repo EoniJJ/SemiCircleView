@@ -14,18 +14,12 @@ in `activity_main.xml`
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 ```
-if you want to start animation,just in `MainActivity.java`
+if you want to start animation,just in `MainActivity.java` (if your mCenterText is not only number,that it can't change)
 ```java
     SemiCircleView semiCircleView = (SemiCircleView) findViewById(R.id.test);
+    semiCircleView.setAnimation(true);
 ```
-and override `onResume()` (if your mCenterText is not only number,that it can't change)
-```java
- @Override
-    protected void onResume() {
-        super.onResume();
-        new Thread(semiCircleView).start();
-    }
-```
+
 # Attribute
 
 ### There are several attributes you can set:

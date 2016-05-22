@@ -14,11 +14,6 @@ public class ShowSemiCircleViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_show);
         semiCircleView = (SemiCircleView) findViewById(R.id.test);
         semiCircleView.setmProgressValue(50);
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        new Thread(semiCircleView).start();
+        semiCircleView.setAnimation(true);
     }
 }

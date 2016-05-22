@@ -1,5 +1,6 @@
 package com.zzj.library;
 
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -39,6 +40,8 @@ public class SemiCircleView extends View implements Runnable {
     private int mTopTextColor, mCenterTextColor, mBottomTextColor;
     //上，中，下文本大小
     private float mTopTextSize, mCenterTextSize, mBottomTextSize;
+    //设置动画是否开启
+    private boolean animation;
 
     public SemiCircleView(Context context) {
         this(context, null);
@@ -194,6 +197,12 @@ public class SemiCircleView extends View implements Runnable {
         invalidate();
     }
 
+    public void setAnimation(boolean animation) {
+        this.animation = animation;
+        if (animation) {
+            new Thread(this).start();
+        }
+    }
 
     //线性逐步显示进度
     @Override
@@ -229,7 +238,7 @@ public class SemiCircleView extends View implements Runnable {
         }
     }
 
-    public static boolean isNumeric(String str) {
+    private boolean isNumeric(String str) {
         for (int i = str.length(); --i >= 0; ) {
             int chr = str.charAt(i);
             if (chr < 48 || chr > 57)
@@ -237,4 +246,5 @@ public class SemiCircleView extends View implements Runnable {
         }
         return true;
     }
+
 }
