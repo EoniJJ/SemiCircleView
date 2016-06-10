@@ -1,6 +1,5 @@
 package com.zzj.library;
 
-import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -83,6 +82,7 @@ public class SemiCircleView extends View implements Runnable {
         mTopTextSize = typedArray.getDimension(R.styleable.SemiCircleView_topTextSize, 20);
         mCenterTextSize = typedArray.getDimension(R.styleable.SemiCircleView_centerTextSize, 72);
         mBottomTextSize = typedArray.getDimension(R.styleable.SemiCircleView_bottomTextSize, 20);
+        typedArray.recycle();
 
     }
 
